@@ -1,27 +1,84 @@
-# NgxGoogleAuth
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=200px height=200px src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Project logo"></a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
+<h3 align="center">ngx-google-auth (yet to be published on npm)</h3>
 
-## Development server
+<div align="center">
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/shemmjunior/ngx-google-auth/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/shemmjunior/ngx-google-auth/pulls)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-## Code scaffolding
+</div>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+<p align="center"> A new Google Identity Services library for angular
+    <br>
+</p>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## 📝 Table of Contents
 
-## Running unit tests
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Deployment](#deployment)
+- [Usage](#usage)
+- [Built Using](#built_using)
+- [Authors](#authors)
+- [References](#references)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🧐 About <a name = "about"></a>
 
-## Running end-to-end tests
+ As google are discontinuing the Google Sign-In JavaScript Platform Library for web. The library will be unavailable for download after the March 31, 2023 deprecation date this library. According to Google, the new GIS SDK uses pop-up dialogues in the browser, which helps reduce user friction, streamlines authentication and authorization flows, and increases user engagement.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-## Further help
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Prerequisites
+
+What things you need to install the software and how to install them.
+
+- [NodeJs](https://nodejs.org/en/) - Base Environment
+- [Angular](https://angular.io/) - Angular Environment
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running.
+
+Say what the step will be
+
+```
+todo
+```
+
+And repeat
+
+```
+todo here
+```
+
+## 🔧 Running the tests <a name = "tests"></a>
+
+Add tests steps here.
+
+## 🎈 Usage <a name="usage"></a>
+
+Add notes about how to use the library.
+
+## ⛏️ Built Using <a name = "built_using"></a>
+
+- [NodeJs](https://nodejs.org/en/) - Base Environment
+- [Angular](https://angular.io/) - Angular Environment
+
+## ✍️ Authors <a name = "authors"></a>
+
+- [@shemmjunior](https://github.com/shemmjunior) - Initial work
+
+## 🎉 References <a name = "references"></a>
+
+- [Google Identity Services](https://developers.google.com/identity) - Introduction
+- [Google Identity Services Guides](https://developers.google.com/identity/gsi/web/guides/overview) - Guides
