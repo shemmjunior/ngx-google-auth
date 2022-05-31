@@ -1,41 +1,43 @@
 import { Inject, Injectable } from '@angular/core';
-import jwt_decode from 'jwt-decode';
-import { Context, GoogleAuthConfig } from './interfaces';
+import { GoogleAuthConfig } from './interfaces';
 import { GlobalConfiguration, GLOBAL_CONFIGURATION_SERVICE } from './global.config';
 
 declare let google: any;
-
-
 
 @Injectable({
   providedIn: 'root'
 })
 export class GoogleAuthService {
 
+  /** Script loaded status */
   private loaded: Promise<void>;
 
-  constructor(
-    @Inject(GLOBAL_CONFIGURATION_SERVICE)
-    private globalConfig: GlobalConfiguration
-  ) { }
+  /**
+   * Constructor with injected services
+   * @param globalConfig Global configuration
+   */
+  constructor(@Inject(GLOBAL_CONFIGURATION_SERVICE) private globalConfig: GlobalConfiguration) { }
 
+  /**
+   * Initializes the Google API
+   * @param config Google auth configuration
+   * @returns Promise<void>
+   */
   public init(config: GoogleAuthConfig): Promise<void> {
     return this.load().then(() => {
-    google.accounts.id.initialize({
-        client_id: this.globalConfig.clientId,
-        context: config.context,
-        callback: (res) => {
-          console.log(this.getDecodedAccessToken(res.credential))
-          return this.getDecodedAccessToken(res.credential)
-        }
-      })
+      google.accounts.id.initialize({
+          client_id: this.globalConfig.clientId,
+          context: config.context,
+          callback: config.callback
+        });
       google.accounts.id.prompt();
-    })
+    });
   }
-  
 
-
-
+  /**
+   * Loads the Google API script
+   * @returns Promise<void>
+   */
   private load(): Promise<void> {
     if (!this.loaded) {
       this.loaded = new Promise<void>((resolve, reject) => {
@@ -64,13 +66,5 @@ export class GoogleAuthService {
 
     return this.loaded;
   }
-  
 
-  private getDecodedAccessToken(token: string): any {
-    try {
-      return jwt_decode(token);
-    } catch(Error) {
-      return null;
-    }
-  }
 }
