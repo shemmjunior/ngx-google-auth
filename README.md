@@ -34,6 +34,8 @@
 
  As google are discontinuing the Google Sign-In JavaScript Platform Library for web. The library will be unavailable for download after the March 31, 2023 deprecation date this library. According to Google, the new GIS SDK uses pop-up dialogues in the browser, which helps reduce user friction, streamlines authentication and authorization flows, and increases user engagement.
 
+ This library was generated using angular v11.2.14, other versions are untested.
+
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -47,23 +49,16 @@ What things you need to install the software and how to install them.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+A step by step series of guides how to install the library for local dev. From here I assume you have already installed nodejs to your local machine, Next is:
 
-Say what the step will be
-
-```
-todo
-```
-
-And repeat
-
-```
-todo here
-```
+1. Install Angular v11.2.14 using `npm i @angular/cli@11.2.14`
+2. On the root directory of this project run `npm install` to install all projects dependencies
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
+```
 Add tests steps here.
+```
 
 ## 🎈 Usage <a name="usage"></a>
 
