@@ -1,0 +1,12 @@
+{
+  "name": "google-auth",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^11.2.14",
+    "@angular/core": "^11.2.14"
+  },
+  "dependencies": {
+    "jwt-decode": "^3.1.2",
+    "tslib": "^2.0.0"
+  }
+}
