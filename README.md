@@ -49,15 +49,20 @@ What things you need to install the software and how to install them.
 
 ### Installing
 
+```
+todo: publish first on npm release to add installation
+```
+
+
+## 🔧 Running the tests <a name = "tests"></a>
+
 A step by step series of guides how to install the library for local dev. From here I assume you have already installed nodejs to your local machine, Next is:
 
 1. Install Angular v11.2.14 using `npm i @angular/cli@11.2.14`
 2. On the root directory of this project run `npm install` to install all projects dependencies
 
-## 🔧 Running the tests <a name = "tests"></a>
-
 ```
-Add tests steps here.
+Add more tests steps here.
 ```
 
 ## 🎈 Usage <a name="usage"></a>
