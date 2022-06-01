@@ -1,4 +1,4 @@
-import { GoogleAuthModule } from './../../projects/google-auth/src/lib/google-auth.module';
+import { GoogleAuthModule } from 'dist/google-auth';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 

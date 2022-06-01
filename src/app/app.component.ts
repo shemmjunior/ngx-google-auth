@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GoogleAuthService } from '../../projects/google-auth/src/lib/google-auth.service';
+import { GoogleAuthService } from 'dist/google-auth'; // After running ng build google-auth
 
 @Component({
   selector: 'app-root',
@@ -9,14 +9,15 @@ import { GoogleAuthService } from '../../projects/google-auth/src/lib/google-aut
 export class AppComponent {
   title = 'ngx-google-auth';
 
-  constructor(private gs: GoogleAuthService) {}
+  constructor(private googleAuth: GoogleAuthService) {}
 
   load(): void {
-    this.gs
+    this.googleAuth
       .init({
         context: 'signin',
         callback: (response: any) => {
           console.log(response);
+          /** Continue with your logic */
         }
       });
   }
