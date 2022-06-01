@@ -1,7 +1,7 @@
-import { GoogleAuthModule } from 'dist/google-auth';
+import { GoogleAuthModule } from 'google-auth';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+// import { GoogleAuthModule } from 'ngx-google-auth';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 

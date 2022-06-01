@@ -3,7 +3,7 @@
  <img width=200px height=200px src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">ngx-google-auth (yet to be published on npm)</h3>
+<h3 align="center">ngx-google-auth</h3>
 
 <div align="center">
 
@@ -50,9 +50,8 @@ What things you need to install the software and how to install them.
 ### Installing
 
 ```
-todo: publish first on npm release to add installation
+npm install ngx-google-auth
 ```
-
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
@@ -67,7 +66,63 @@ Add more tests steps here.
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the library.
+1. Install the package from npm with
+```
+npm i ngx-google-auth
+```
+
+2. Import the module to GoogleAuthModule
+```typescript
+import { GoogleAuthModule } from 'ngx-google-auth';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    GoogleAuthModule.forRoot({ clientId: 'provide_your_client_id' })
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+3. Import the service anywhere on your component
+```typescript
+import { Component } from '@angular/core';
+import { GoogleAuthService } from 'dist/google-auth'; // After running ng build google-auth
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+})
+export class AppComponent {
+
+  constructor(private googleAuthService: GoogleAuthService) {}
+
+  load(): void {
+    this.googleAuthService
+      .init({
+        context: 'signin',
+        callback: (response: any) => {
+          console.log(response);
+          /** Continue with your logic */
+        }
+      });
+  }
+}
+
+```
+
+3. For better security please verify the token on your server side
+[Verifying Token on the server side](https://developers.google.com/identity/gsi/web/guides/verify-google-id-token)
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 

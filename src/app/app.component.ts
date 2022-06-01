@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GoogleAuthService } from 'dist/google-auth'; // After running ng build google-auth
+import { GoogleAuthService } from 'google-auth'; //
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,6 @@ import { GoogleAuthService } from 'dist/google-auth'; // After running ng build 
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'ngx-google-auth';
 
   constructor(private googleAuth: GoogleAuthService) {}
 
